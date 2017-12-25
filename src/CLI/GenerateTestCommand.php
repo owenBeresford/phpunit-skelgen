@@ -94,7 +94,7 @@ class GenerateTestCommand extends BaseCommand
      * @param InputInterface  $input  An InputInterface instance
      * @return AbstractGenerator
      */
-    protected function getGenerator(InputInterface $input)
+    protected function getGenerator(InputInterface $input):AbstractGenerator
     {
         return new TestGenerator(
             (string)$input->getArgument('class'),

@@ -108,7 +108,7 @@ abstract class AbstractGenerator
     /**
      * @return string
      */
-    public function getOutClassName()
+    public function getOutClassName():string
     {
         return $this->outClassName['fullyQualifiedClassName'];
     }
@@ -116,7 +116,7 @@ abstract class AbstractGenerator
     /**
      * @return string
      */
-    public function getOutSourceFile()
+    public function getOutSourceFile():string
     {
         return $this->outSourceFile;
     }
@@ -126,7 +126,7 @@ abstract class AbstractGenerator
      *
      * @param string $file
      */
-    public function write($file = '')
+    public function write($file = '') :void
     {
         if ($file == '') {
             $file = $this->outSourceFile;
@@ -139,7 +139,7 @@ abstract class AbstractGenerator
      * @param  string $className
      * @return array
      */
-    protected function parseFullyQualifiedClassName($className)
+    protected function parseFullyQualifiedClassName($className):array
     {
         $result = array(
             'namespace'               => '',
@@ -160,7 +160,7 @@ abstract class AbstractGenerator
      * @param  array $parts
      * @return string
      */
-    protected function arrayToName(array $parts)
+    protected function arrayToName(array $parts):array
     {
         $result = '';
 

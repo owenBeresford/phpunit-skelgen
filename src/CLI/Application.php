@@ -82,7 +82,7 @@ class Application extends AbstractApplication
         if (!$input->hasParameterOption('--quiet')) {
             $output->write(
                 sprintf(
-                    "phpunit-skelgen %s by Sebastian Bergmann.\n\n",
+                    "phpunit-skelgen %s originally by Sebastian Bergmann.\n\n",
                     $this->getVersion()
                 )
             );

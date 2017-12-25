@@ -134,8 +134,20 @@ class TestGenerator extends AbstractGenerator
             $outClassName = $inClassName . 'Test';
         }
 
-        if (empty($outSourceFile)) {
-            $outSourceFile = dirname($inSourceFile) . DIRECTORY_SEPARATOR . $outClassName . '.php';
+        if (empty($outSourceFile)) { // IOIO
+			$nested="";
+            $outSourceFile = dirname($inSourceFile);
+
+			$nested=basename($inSourceFile);
+			if(strpos($nested, 'Bundle') !== false ) {
+				$nested='';
+			} else {
+				$nested="/$nested";
+				$inSourceFile=dirname($inSourceFile);
+			}
+			
+            $outSourceFile = $inSourceFile .'/Tests'.$nested.'/';
+			$outSourceFile.=$outClassName . '.php';
         }
 
         parent::__construct(
@@ -149,7 +161,7 @@ class TestGenerator extends AbstractGenerator
     /**
      * @return string
      */
-    public function generate()
+    public function generate():string
     {
         $class = new \ReflectionClass(
             $this->inClassName['fullyQualifiedClassName']
@@ -321,6 +333,7 @@ class TestGenerator extends AbstractGenerator
             array(
                 'namespace'          => $namespace,
                 'namespaceSeparator' => !empty($namespace) ? '\\' : '',
+                'fullClassName'      => $this->inClassName['fullyQualifiedClassName'],
                 'className'          => $this->inClassName['className'],
                 'testClassName'      => $this->outClassName['className'],
                 'methods'            => $methods . $incompleteMethods,

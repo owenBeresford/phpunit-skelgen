@@ -101,5 +101,5 @@ abstract class BaseCommand extends Command
      * @param InputInterface  $input  An InputInterface instance
      * @return AbstractGenerator
      */
-    abstract protected function getGenerator(InputInterface $input);
+    abstract protected function getGenerator(InputInterface $input):AbstractGenerator;
 }

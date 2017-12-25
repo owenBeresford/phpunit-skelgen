@@ -5,8 +5,7 @@
      */
     public function test{methodName}()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
+        $this->markTestSkipped(
             'This test has not been implemented yet.'
         );
     }
