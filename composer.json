@@ -8,20 +8,26 @@
         {
             "name": "Sebastian Bergmann",
             "email": "sebastian@phpunit.de",
-            "role": "lead"
+            "role": "retired"
+        },
+        {
+            "name": "oab1",
+            "email": "owenBeresford@users.noreply.github.com",
+            "role": "maintainer"
         }
+
     ],
     "support": {
         "issues": "https://github.com/sebastianbergmann/phpunit-skeleton-generator/issues"
     },
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=7.0.22",
         "phpunit/php-text-template": "~1.2",
         "sebastian/version": "~1.0|~2.0",
         "symfony/console": "~2.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0",
+        "phpunit/phpunit": ">=6.0",
         "mikey179/vfsStream": "~1.2"
     },
     "autoload": {
@@ -38,4 +44,3 @@
         }
     }
 }
-
