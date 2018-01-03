@@ -2,7 +2,7 @@
 * put tests in ../Tests, as is normal for Symfony
 * include testee class in use statement
 * message about test file write now correctly hides in case of failure
-* added a few more saftey rail exception cases
+* added a few more safety rail exceptions
 * edited test templates abit to match my style of unit tests
 
 # PHPUnit Skeleton Generator
