@@ -4,6 +4,7 @@
 * message about test file write now correctly hides in case of failure
 * added a few more safety rail exceptions
 * edited test templates abit to match my style of unit tests
+* added return type decl to method description
 
 # PHPUnit Skeleton Generator
 
