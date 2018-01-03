@@ -2,6 +2,9 @@
 
 # PHPUnit Skeleton Generator
 
+# LICENCE: 
+The original project shipped under BSD3 clause licence.  I don't think I am allowed to change that to a different version of licence, so this project is my only BSD licenced software.
+
 `phpunit-skelgen` is a tool that can generate skeleton test classes from production code classes and vice versa.
 
 ## Installation

@@ -1,6 +1,6 @@
 <?php{namespace}
 
-use {fullClassName}
+use {fullClassName};
 use PHPUnit{namespaceSeparator}Framework{namespaceSeparator}TestCase;
 
 /**

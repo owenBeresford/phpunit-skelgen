@@ -138,15 +138,16 @@ class TestGenerator extends AbstractGenerator
 			$nested="";
             $outSourceFile = dirname($inSourceFile);
 
-			$nested=basename($inSourceFile);
+			$nested=basename($outSourceFile);
 			if(strpos($nested, 'Bundle') !== false ) {
 				$nested='';
 			} else {
 				$nested="/$nested";
-				$inSourceFile=dirname($inSourceFile);
+				$outSourceFile=dirname($outSourceFile);
 			}
 			
-            $outSourceFile = $inSourceFile .'/Tests'.$nested.'/';
+			$this->createTestDirs( $outSourceFile, $nested);
+            $outSourceFile .= '/Tests'.$nested.'/';
 			$outSourceFile.=$outClassName . '.php';
         }
 
@@ -157,6 +158,27 @@ class TestGenerator extends AbstractGenerator
             $outSourceFile
         );
     }
+
+
+	/**
+	 * createDirs ~ probably only used to pass tests, normally these will already be there.
+	 * 
+	 * @access private
+	 * @return <self>
+	 */
+	private function createTestDirs(string $outSourceFile, string $nested) {
+		$test="Tests";
+
+		if(!file_exists($outSourceFile)) {
+			throw new \Exception("Panic! Can't find base directory $outSourceFile");
+		}
+		if(!file_exists("$outSourceFile/$test")) {
+			mkdir( "$outSourceFile/$test");
+		}
+		if(!file_exists("$outSourceFile/$test$nested")) {
+			mkdir( "$outSourceFile/$test$nested");
+		}
+	}
 
     /**
      * @return string

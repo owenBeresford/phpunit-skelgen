@@ -64,8 +64,6 @@ class GenerateClassCommand extends BaseCommand
      */
     protected function configure()
     {
-var_dump("\n*****************************\ngenerate clsss is deprecated in the oab1 version of this tool.\nPlease use the original.\n************************************\0n");
-die(1);
         $this->setName('generate-class')
              ->setDescription('Generate a class based on a test class')
              ->addArgument(
@@ -96,8 +94,10 @@ die(1);
      * @param InputInterface  $input  An InputInterface instance
      * @return AbstractGenerator
      */
-    protected function getGenerator(InputInterface $input)
+    protected function getGenerator(InputInterface $input):AbstractGenerator
     {
+var_dump("\n*****************************\ngenerate class is deprecated in the oab1 version of this tool.\nPlease use the original, if you want that feature.\n************************************\n");
+die(1);
         return new ClassGenerator(
             (string)$input->getArgument('test-class'),
             (string)$input->getArgument('test-source'),

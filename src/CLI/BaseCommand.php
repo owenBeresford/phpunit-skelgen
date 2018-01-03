@@ -86,15 +86,15 @@ abstract class BaseCommand extends Command
         }
 
         $generator = $this->getGenerator($input);
-        $generator->write();
-
-        $output->writeln(
+        if($generator->write()) {
+	        $output->writeln(
             sprintf(
                 'Wrote skeleton for "%s" to "%s".',
                 $generator->getOutClassName(),
                 $generator->getOutSourceFile()
             )
-        );
+    	    );
+		}
     }
 
     /**

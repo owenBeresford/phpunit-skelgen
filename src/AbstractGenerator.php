@@ -126,13 +126,13 @@ abstract class AbstractGenerator
      *
      * @param string $file
      */
-    public function write($file = '') :void
+    public function write($file = '') :bool
     {
         if ($file == '') {
             $file = $this->outSourceFile;
         }
 
-        file_put_contents($file, $this->generate());
+        return false !== file_put_contents($file, $this->generate());
     }
 
     /**
@@ -160,7 +160,7 @@ abstract class AbstractGenerator
      * @param  array $parts
      * @return string
      */
-    protected function arrayToName(array $parts):array
+    protected function arrayToName(array $parts):string
     {
         $result = '';
 
