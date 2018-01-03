@@ -1,4 +1,9 @@
-**this is the oab1 remix for php7, and the ../tests dir.**
+**this is the oab1 remix for php7**
+* put tests in ../Tests, as is normal for Symfony
+* include testee class in use statement
+* message about test file write now correctly hides in case of failure
+* added a few more saftey rail exception cases
+* edited test templates abit to match my style of unit tests
 
 # PHPUnit Skeleton Generator
 
