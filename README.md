@@ -6,6 +6,9 @@
 * edited test templates abit to match my style of unit tests
 * added return type decl to method description
 
+#TODO 
+* patch Phar process as needed to make new binary
+
 # PHPUnit Skeleton Generator
 
 # LICENCE: 
