@@ -1,6 +1,7 @@
 **this is the oab1 remix for php7**
 * put tests in ../Tests, as is normal for Symfony
-* include testee class in use statement
+* updated referenced classes for phunit6 basis not phpunit 4
+* include testee class in a use statement
 * message about test file written now correctly is hidden in case of failure
 * added a few more safety rail exceptions
 * edited test templates abit to match my style of unit tests
