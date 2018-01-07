@@ -1,7 +1,7 @@
 **this is the oab1 remix for php7**
 * put tests in ../Tests, as is normal for Symfony
 * include testee class in use statement
-* message about test file write now correctly hides in case of failure
+* message about test file written now correctly is hidden in case of failure
 * added a few more safety rail exceptions
 * edited test templates abit to match my style of unit tests
 * added return type decl to method description
