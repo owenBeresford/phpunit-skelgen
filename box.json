@@ -1,0 +1,19 @@
+{
+    "alias": "phpunit-skelgen.phar",
+    "chmod": "0755",
+    "directories": ["src"],
+    "files": [
+        "LICENSE"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": ["Tests"],
+            "in": "vendor"
+        }
+    ],
+    "git-version": "package_version",
+    "main": "phpunit-skelgen",
+    "output": "skelgen.phar",
+    "stub": true
+}
