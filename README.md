@@ -6,9 +6,16 @@
 * added a few more safety rail exceptions
 * edited test templates abit to match my style of unit tests
 * added return type decl to method description
+* added a box.json to allow code to be built with [box2](https://github.com/box-project/box2)
 
-#TODO 
-* patch Phar process as needed to make new binary
+A precompiled PHAR is available from [my site](http://owenberesford.me.uk/asset/skelgen.phar), as a quick download. For serious use, pls compile your own source (so PHP library checking happens).
+
+# TODO:  
+* maybe delete previous build process files
+* add sniffing for contor param
+* add PHP version checking, as install via PHAR skips `composer` doing this..
+
+Original text by S Bergmann:
 
 # PHPUnit Skeleton Generator
 
