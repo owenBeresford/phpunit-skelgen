@@ -1,4 +1,5 @@
 **this is the oab1 remix for php7**
+* UPDATE 2022: I don't use PHP very much anymore. Im archiving this.
 * put tests in ../Tests, as is normal for Symfony
 * updated referenced classes for phunit6 basis not phpunit 4
 * include testee class in a use statement
@@ -8,7 +9,7 @@
 * added return type decl to method description
 * added a box.json to allow code to be built with [box2](https://github.com/box-project/box2)
 
-A precompiled PHAR is available from [my site](http://owenberesford.me.uk/asset/skelgen.phar), as a quick download. For serious use, pls compile your own source (so PHP library checking happens).
+A precompiled PHAR is available from [my site](https://owenberesford.me.uk/asset/skelgen.phar), as a quick download. For serious use, pls compile your own source (so PHP library checking happens).
 
 # TODO:  
 * maybe delete previous build process files
